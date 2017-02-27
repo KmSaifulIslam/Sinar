@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.875, 16.125" name="TokoSinarDB">
+  <DataContextMoniker Name="/TokoSinarDB" />
+  <nestedChildShapes>
+    <classShape Id="fd61d8c2-8bf4-43c6-93b5-8d77bee68bcc" absoluteBounds="0.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TokoSinarDB/ViewReportInventori" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7b3b7ac-40db-43e4-82ba-704bb3ceed93" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c00c6335-1f68-4ce7-bf18-374d50119c23" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/TokoSinarDB/ViewReportPenjualan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b380b5ac-7556-4989-99ad-e06f68fb1e85" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a231c7d7-0ffa-43e8-a199-62a4b42dd1c3" absoluteBounds="0.75, 4.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/TokoSinarDB/ViewReportPembelian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a0a70b4-f7cb-4ba0-bc14-693bc645d5d1" absoluteBounds="0.765, 5.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8eccc735-29cc-410c-90ec-df7bf70639cb" absoluteBounds="3.5, 10, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/TokoSinarDB/tbSupplier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="daa0fbb4-c035-4f6c-98a3-29dc7bfa874d" absoluteBounds="3.515, 10.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9b0ab6b5-6168-4d85-8aef-12a3d994d479" absoluteBounds="6.25, 9.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/TokoSinarDB/tbBarang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9104079c-4138-48ea-8296-424c3e63cba2" absoluteBounds="6.265, 10.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03ecc5b4-a4dc-4626-b60e-41ebe7f451a2" absoluteBounds="9, 12.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/TokoSinarDB/tbDetailPembelian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="073c8829-eed1-428f-91c0-f5cd8812c147" absoluteBounds="9.015, 13.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="553feaf7-7ac4-4ab8-bc5c-bcab946fa9b9" absoluteBounds="9, 6.875, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/TokoSinarDB/tbDetailPenjualan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6735f65c-99f9-472a-97fe-4e3d7413a60b" absoluteBounds="9.015, 7.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="295fda0b-e321-4ae8-b960-834f6b7826cb" absoluteBounds="9, 10.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TokoSinarDB/tbDetailRetur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="362fa7e7-c53f-4590-9d47-0f4338e578c0" absoluteBounds="9.015, 10.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e2643333-aa3f-4d83-8197-dea61079aa2f" absoluteBounds="3.5, 13.875, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/TokoSinarDB/tbKaryawan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d048e7bc-1527-42d5-8461-74d64e84fe6b" absoluteBounds="3.515, 14.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0bd0c60-cd12-49ad-8f4d-14df1d8bbd53" absoluteBounds="6.25, 5.5, 2, 2.9247054036458335">
+      <DataClassMoniker Name="/TokoSinarDB/tbPembelian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2752c586-8894-4530-b226-510a1c4f3d54" absoluteBounds="6.265, 5.96, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67f34099-ac8a-45df-bd89-432333f1804b" absoluteBounds="6.25, 13.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/TokoSinarDB/tbPenjualan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d8de1ee-a2b6-44f3-ad7f-163f9d52f45d" absoluteBounds="6.265, 13.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d850d95e-5103-482a-8845-4944de0b2412" absoluteBounds="9, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/TokoSinarDB/tbRetur" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2684218-bd8f-42c0-9123-fae3f2acd799" absoluteBounds="9.015, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4da5acb5-2688-4984-941b-f00ae36ee060" absoluteBounds="0.75, 14.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/TokoSinarDB/tbRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="708eca7f-90dc-471e-bda9-b1c55b052b9f" absoluteBounds="0.765, 14.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 10.8854484049479); (5.79166666666667 : 10.8854484049479 : JumpStart); (5.95833333333333 : 10.8854484049479 : JumpEnd); (6.25 : 10.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbSupplier/tbSupplier_tbBarang" />
+      <nodes>
+        <classShapeMoniker Id="8eccc735-29cc-410c-90ec-df7bf70639cb" />
+        <classShapeMoniker Id="9b0ab6b5-6168-4d85-8aef-12a3d994d479" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 12.0304996744792); (8.625 : 12.4054996744792); (8.625 : 13.9239005533854); (9 : 13.9239005533854)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbBarang/tbBarang_tbDetailPembelian" />
+      <nodes>
+        <classShapeMoniker Id="9b0ab6b5-6168-4d85-8aef-12a3d994d479" />
+        <classShapeMoniker Id="03ecc5b4-a4dc-4626-b60e-41ebe7f451a2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.875); (8.625 : 9.5); (8.625 : 7.85659912109375); (9 : 7.85659912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbBarang/tbBarang_tbDetailPenjualan" />
+      <nodes>
+        <classShapeMoniker Id="9b0ab6b5-6168-4d85-8aef-12a3d994d479" />
+        <classShapeMoniker Id="553feaf7-7ac4-4ab8-bc5c-bcab946fa9b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 10.9142976888021); (8.60416666666667 : 10.9142976888021 : JumpStart); (8.89583333333333 : 10.9142976888021 : JumpEnd); (9 : 10.9142976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbBarang/tbBarang_tbDetailRetur" />
+      <nodes>
+        <classShapeMoniker Id="9b0ab6b5-6168-4d85-8aef-12a3d994d479" />
+        <classShapeMoniker Id="295fda0b-e321-4ae8-b960-834f6b7826cb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.36316594210737); (8.56607443490112 : 8.67924037700849 : JumpStart); (8.74642556509888 : 8.85959150720625 : JumpEnd); (8.8125 : 8.92566594210737); (8.8125 : 13.3056982766927); (9 : 13.3056982766927)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbPembelian/tbPembelian_tbDetailPembelian" />
+      <nodes>
+        <classShapeMoniker Id="b0bd0c60-cd12-49ad-8f4d-14df1d8bbd53" />
+        <classShapeMoniker Id="03ecc5b4-a4dc-4626-b60e-41ebe7f451a2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 13.875); (5.875 : 13.5); (5.875 : 6.96235270182292); (6.25 : 6.96235270182292)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbKaryawan/tbKaryawan_tbPembelian" />
+      <nodes>
+        <classShapeMoniker Id="e2643333-aa3f-4d83-8197-dea61079aa2f" />
+        <classShapeMoniker Id="b0bd0c60-cd12-49ad-8f4d-14df1d8bbd53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 10); (4.5 : 7.72478155273438); (5.79166666666667 : 7.72478155273437 : JumpStart); (5.95833333333333 : 7.72478155273438 : JumpEnd); (6.25 : 7.72478155273438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbSupplier/tbSupplier_tbPembelian" />
+      <nodes>
+        <classShapeMoniker Id="8eccc735-29cc-410c-90ec-df7bf70639cb" />
+        <classShapeMoniker Id="b0bd0c60-cd12-49ad-8f4d-14df1d8bbd53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 13.1869285109675); (8.56607443490112 : 12.8708540760664 : JumpStart); (8.68392556509888 : 12.7530029458687 : JumpEnd); (8.6875 : 12.7494285109675); (8.6875 : 8.37865068164063); (9 : 8.37865068164063)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbPenjualan/tbPenjualan_tbDetailPenjualan" />
+      <nodes>
+        <classShapeMoniker Id="67f34099-ac8a-45df-bd89-432333f1804b" />
+        <classShapeMoniker Id="553feaf7-7ac4-4ab8-bc5c-bcab946fa9b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 14.3205501888021); (6.25 : 14.3205501888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbKaryawan/tbKaryawan_tbPenjualan" />
+      <nodes>
+        <classShapeMoniker Id="e2643333-aa3f-4d83-8197-dea61079aa2f" />
+        <classShapeMoniker Id="67f34099-ac8a-45df-bd89-432333f1804b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 5.6362939453125); (11.375 : 6.0112939453125); (11.375 : 9.75); (11 : 10.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TokoSinarDB/tbRetur/tbRetur_tbDetailRetur" />
+      <nodes>
+        <classShapeMoniker Id="d850d95e-5103-482a-8845-4944de0b2412" />
+        <classShapeMoniker Id="295fda0b-e321-4ae8-b960-834f6b7826cb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 5.5); (7.25 : 4.8749995); (9 : 4.8749995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbPembelian/tbPembelian_tbRetur" />
+      <nodes>
+        <classShapeMoniker Id="b0bd0c60-cd12-49ad-8f4d-14df1d8bbd53" />
+        <classShapeMoniker Id="d850d95e-5103-482a-8845-4944de0b2412" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.9719962565104); (3.5 : 14.9719962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/TokoSinarDB/tbRole/tbRole_tbKaryawan" />
+      <nodes>
+        <classShapeMoniker Id="4da5acb5-2688-4984-941b-f00ae36ee060" />
+        <classShapeMoniker Id="e2643333-aa3f-4d83-8197-dea61079aa2f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

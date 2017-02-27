@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TokoSinar" Class="TokoSinarDB" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=TokoSinar;Integrated Security=True" SettingsObjectName="TokoSinar.Properties.Settings" SettingsPropertyName="TokoSinarConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ViewReportInventori" Member="ViewReportInventoris">
+    <Type Name="ViewReportInventori">
+      <Column Name="ID_Barang" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nama_Barang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Harga_Beli" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Harga_Jual" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Satuan" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Stok" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Nama_Supplier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewReportPenjualan" Member="ViewReportPenjualans">
+    <Type Name="ViewReportPenjualan">
+      <Column Name="ID_Penjualan" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Tanggal_Penjualan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Nama_Barang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Harga_Jual" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Jumlah_Jual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sub_Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Total_Penjualan" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ViewReportPembelian" Member="ViewReportPembelians">
+    <Type Name="ViewReportPembelian">
+      <Column Name="No_Faktur" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Tanggal_Pembelian" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CaraBayar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Salesman" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JatuhTempo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Harga_Beli" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Jumlah_Beli" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sub_Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PPN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total_Pembelian" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Nama_Barang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nama_Supplier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbSupplier" Member="tbSuppliers">
+    <Type Name="tbSupplier">
+      <Column Name="ID_Supplier" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nama_Supplier" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Alamat_Supplier" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="No_TelponSupplier" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="tbSupplier_tbBarang" Member="tbBarangs" ThisKey="ID_Supplier" OtherKey="ID_Supplier" Type="tbBarang" />
+      <Association Name="tbSupplier_tbPembelian" Member="tbPembelians" ThisKey="ID_Supplier" OtherKey="ID_Supplier" Type="tbPembelian" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbBarang" Member="tbBarangs">
+    <Type Name="tbBarang">
+      <Column Name="ID_Barang" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nama_Barang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Harga_Beli" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Harga_Jual" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Satuan" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Stok" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Supplier" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tbBarang_tbDetailPembelian" Member="tbDetailPembelians" ThisKey="ID_Barang" OtherKey="ID_Barang" Type="tbDetailPembelian" />
+      <Association Name="tbBarang_tbDetailPenjualan" Member="tbDetailPenjualans" ThisKey="ID_Barang" OtherKey="ID_Barang" Type="tbDetailPenjualan" />
+      <Association Name="tbBarang_tbDetailRetur" Member="tbDetailReturs" ThisKey="ID_Barang" OtherKey="ID_Barang" Type="tbDetailRetur" />
+      <Association Name="tbSupplier_tbBarang" Member="tbSupplier" ThisKey="ID_Supplier" OtherKey="ID_Supplier" Type="tbSupplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailPembelian" Member="tbDetailPembelians">
+    <Type Name="tbDetailPembelian">
+      <Column Name="ID_DetailPembelian" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama_Barang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Harga_Beli" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Jumlah_Beli" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Diskon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sub_Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ID_Barang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="No_Faktur" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tbBarang_tbDetailPembelian" Member="tbBarang" ThisKey="ID_Barang" OtherKey="ID_Barang" Type="tbBarang" IsForeignKey="true" />
+      <Association Name="tbPembelian_tbDetailPembelian" Member="tbPembelian" ThisKey="No_Faktur" OtherKey="No_Faktur" Type="tbPembelian" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailPenjualan" Member="tbDetailPenjualans">
+    <Type Name="tbDetailPenjualan">
+      <Column Name="ID_DetailPenjualan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Harga_Jual" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Jumlah_Jual" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sub_Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ID_Penjualan" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_Barang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tbBarang_tbDetailPenjualan" Member="tbBarang" ThisKey="ID_Barang" OtherKey="ID_Barang" Type="tbBarang" IsForeignKey="true" />
+      <Association Name="tbPenjualan_tbDetailPenjualan" Member="tbPenjualan" ThisKey="ID_Penjualan" OtherKey="ID_Penjualan" Type="tbPenjualan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbDetailRetur" Member="tbDetailReturs">
+    <Type Name="tbDetailRetur">
+      <Column Name="ID_DetailRetur" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Jumlah_Retur" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_Retur" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ID_Barang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tbBarang_tbDetailRetur" Member="tbBarang" ThisKey="ID_Barang" OtherKey="ID_Barang" Type="tbBarang" IsForeignKey="true" />
+      <Association Name="tbRetur_tbDetailRetur" Member="tbRetur" ThisKey="ID_Retur" OtherKey="ID_Retur" Type="tbRetur" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbKaryawan" Member="tbKaryawans">
+    <Type Name="tbKaryawan">
+      <Column Name="Username" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nama" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Alamat" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ID_Role" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbKaryawan_tbPembelian" Member="tbPembelians" ThisKey="Username" OtherKey="Username" Type="tbPembelian" />
+      <Association Name="tbKaryawan_tbPenjualan" Member="tbPenjualans" ThisKey="Username" OtherKey="Username" Type="tbPenjualan" />
+      <Association Name="tbRole_tbKaryawan" Member="tbRole" ThisKey="ID_Role" OtherKey="ID_Role" Type="tbRole" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbPembelian" Member="tbPembelians">
+    <Type Name="tbPembelian">
+      <Column Name="No_Faktur" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tanggal_Pembelian" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CaraBayar" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Salesman" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JatuhTempo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sub_Total" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="PPN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Total_Pembelian" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID_Supplier" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="tbPembelian_tbDetailPembelian" Member="tbDetailPembelians" ThisKey="No_Faktur" OtherKey="No_Faktur" Type="tbDetailPembelian" />
+      <Association Name="tbPembelian_tbRetur" Member="tbReturs" ThisKey="No_Faktur" OtherKey="No_Faktur" Type="tbRetur" />
+      <Association Name="tbKaryawan_tbPembelian" Member="tbKaryawan" ThisKey="Username" OtherKey="Username" Type="tbKaryawan" IsForeignKey="true" />
+      <Association Name="tbSupplier_tbPembelian" Member="tbSupplier" ThisKey="ID_Supplier" OtherKey="ID_Supplier" Type="tbSupplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbPenjualan" Member="tbPenjualans">
+    <Type Name="tbPenjualan">
+      <Column Name="ID_Penjualan" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tanggal_Penjualan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Total_Penjualan" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Association Name="tbPenjualan_tbDetailPenjualan" Member="tbDetailPenjualans" ThisKey="ID_Penjualan" OtherKey="ID_Penjualan" Type="tbDetailPenjualan" />
+      <Association Name="tbKaryawan_tbPenjualan" Member="tbKaryawan" ThisKey="Username" OtherKey="Username" Type="tbKaryawan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbRetur" Member="tbReturs">
+    <Type Name="tbRetur">
+      <Column Name="ID_Retur" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tanggal_Retur" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="No_Faktur" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="tbRetur_tbDetailRetur" Member="tbDetailReturs" ThisKey="ID_Retur" OtherKey="ID_Retur" Type="tbDetailRetur" />
+      <Association Name="tbPembelian_tbRetur" Member="tbPembelian" ThisKey="No_Faktur" OtherKey="No_Faktur" Type="tbPembelian" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbRole" Member="tbRoles">
+    <Type Name="tbRole">
+      <Column Name="ID_Role" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama_Role" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbRole_tbKaryawan" Member="tbKaryawans" ThisKey="ID_Role" OtherKey="ID_Role" Type="tbKaryawan" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_AutoIDBarang" Method="SP_AutoIDBarang">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_AutoIDSupplier" Method="SP_AutoIDSupplier">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_AutoIDPenjualan" Method="SP_AutoIDPenjualan">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_AutoIDRetur" Method="SP_AutoIDRetur">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FC_AutoIDBarang" Method="FC_AutoIDBarang" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.FC_AutoIDSupplier" Method="FC_AutoIDSupplier" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.FC_AutoIDPenjualan" Method="FC_AutoIDPenjualan" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.FC_AutoIDRetur" Method="FC_AutoIDRetur" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+</Database>
